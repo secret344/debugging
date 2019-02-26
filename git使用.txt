@@ -1,0 +1,61 @@
+//提醒：千万不要再主分支身上做任何事情
+1 git init
+2 git config --global user.name ''
+  git config --global user.email '
+3 git config --list//查看配置信息
+4 git add  //提交到暂存区
+5 git commit -m "第一次提交" //提交到版本库
+//修改文件后
+6 git status //查看文件状态
+4 git add  //提交到暂存区
+6 git status //查看文件状态
+7 git commit -m "第二次提交" //提交到版本库
+//git log 查看提交日志
+//git diff master对比工作区与版本库异同
+// git diff --cached 版本库与暂存区的区别
+// git reflog 精简版本号
+//$ git reset --hard HEAD^ //回退到上一个版本 ^一个代表一次版本
+eg:HEAD is now at 52aa7b8 第二次提交
+git reset --hard HEAD~1 //~指定回退版本
+HEAD is now at 06f3ed6 第一次提交
+ git reset --hard 版本号  //指定版本号回退
+
+
+/git branch  查看分支 //git branch name 加名字创建分支
+git checkout name  切换分支
+ git checkout -b name  创建切换分支
+
+
+
+//实际操作
+git clone “地址”
+ssh-keygen -t rsa -C  “email”//获取秘钥 在家名字为文件夹名字
+
+//进公司clone 首先创建子分支
+提交分支 git push --set-upstream origin name
+ctu角色（主分支人物）：
+拉取更新线上分支  git fetch
+直接切换分支 git checkout name
+切换到主分支
+合并文件  git merge name(合并分支名称)
+git push
+
+
+//拉去线上代码
+git pull
+合并子分支跟主分支
+git merge master
+
+
+
+
+//删除远端分支
+git push origin --delete 分支名称
+
+
+//删除本地分支
+git branch -D 分支名称
+
+
+
+
